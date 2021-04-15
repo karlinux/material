@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import mx.com.aulaxalapa.material.utils.CommonUtils;
 import mx.com.aulaxalapa.material.utils.Constantes;
 
@@ -24,6 +25,7 @@ public class StaticActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ButterKnife.bind(this);
         setContentView(R.layout.activity_static);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

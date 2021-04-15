@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import mx.com.aulaxalapa.material.utils.CommonUtils;
 import mx.com.aulaxalapa.material.utils.Constantes;
 
@@ -29,6 +30,7 @@ public class ScrollActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scroll);
+        ButterKnife.bind(this);
         setSupportActionBar(toolbar);
         CollapsingToolbarLayout toolBarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
         toolBarLayout.setTitle(getTitle());
