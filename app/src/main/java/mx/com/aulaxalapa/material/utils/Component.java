@@ -9,7 +9,7 @@ import java.util.Objects;
 public class Component {
 
     private String name;
-    private int phtpRes;
+    private int photoRes;
     private int type;
 
     public Component() {
@@ -23,12 +23,12 @@ public class Component {
         this.name = name;
     }
 
-    public int getPhtpRes() {
-        return phtpRes;
+    public int getPhotoRes() {
+        return photoRes;
     }
 
-    public void setPhtpRes(int phtpRes) {
-        this.phtpRes = phtpRes;
+    public void setPhotopRes(int phtpRes) {
+        this.photoRes = phtpRes;
     }
 
     public int getType() {
@@ -45,7 +45,7 @@ public class Component {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Component component = (Component) o;
-        return phtpRes == component.phtpRes &&
+        return photoRes == component.photoRes &&
                 type == component.type &&
                 Objects.equals(name, component.name);
     }
@@ -53,6 +53,6 @@ public class Component {
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public int hashCode() {
-        return Objects.hash(name, phtpRes, type);
+        return Objects.hash(name, photoRes, type);
     }
 }

@@ -40,7 +40,7 @@ public class ComponentAdapter extends RecyclerView.Adapter<ComponentAdapter.View
         Component component = mComponent.get(position);
         holder.setClickListener(mlistener, component);
         holder.tvname.setText(component.getName());
-        holder.imgFoto.setImageResource(component.getPhtpRes());
+        holder.imgPhoto.setImageResource(component.getPhotoRes());
     }
 
     @Override
@@ -48,14 +48,14 @@ public class ComponentAdapter extends RecyclerView.Adapter<ComponentAdapter.View
         return mComponent.size();
     }
     public void add(Component component){
-        if(mComponent.contains(component)){
+        if(!mComponent.contains(component)){
             mComponent.add(component);
             notifyItemInserted(mComponent.size() - 1);
         }
     }
     class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.imFoto)
-        AppCompatImageView imgFoto;
+        @BindView(R.id.imgPhoto)
+        AppCompatImageView imgPhoto;
         @BindView(R.id.tvName)
         TextView tvname;
 

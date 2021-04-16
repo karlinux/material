@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import mx.com.aulaxalapa.material.adapters.ComponentAdapter;
+import mx.com.aulaxalapa.material.fragments.BottomNavigationBarFragment;
+import mx.com.aulaxalapa.material.fragments.ButtonFragment;
 import mx.com.aulaxalapa.material.utils.Component;
 import mx.com.aulaxalapa.material.utils.Constantes;
 import mx.com.aulaxalapa.material.utils.OnClickListener;
@@ -33,7 +35,8 @@ public class InicioMaterial extends AppCompatActivity implements OnClickListener
 
     private void configAdapter(){
         mAdapter =  new ComponentAdapter(new ArrayList<>(), this);
-
+        mAdapter.add(ButtonFragment.getInstance());
+        mAdapter.add(BottomNavigationBarFragment.getInstance());
     }
 
     private void configRecycleView(){
