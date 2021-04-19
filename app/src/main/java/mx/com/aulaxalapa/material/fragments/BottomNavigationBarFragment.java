@@ -1,5 +1,6 @@
 package mx.com.aulaxalapa.material.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -47,12 +48,15 @@ public class BottomNavigationBarFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_bottom_navigation_bar, container, false);
         mUnbinder = ButterKnife.bind(this, view);
         bottomNavigation.getOrCreateBadge(R.id.action_start);
-        //bottomNavigation.removeBadge(R.id.action_start);
         BadgeDrawable favoriteBadge = bottomNavigation.getOrCreateBadge(R.id.action_favorites);
         favoriteBadge.setNumber(21);
-
+        BadgeDrawable profileBadge = bottomNavigation.getOrCreateBadge(R.id.action_profile);
+        profileBadge.setNumber(1000);
+        profileBadge.setMaxCharacterCount(3);
+        profileBadge.setBackgroundColor(Color.RED);
+        profileBadge.setBadgeTextColor(Color.WHITE);
         //Número de caracteres y el +
-        favoriteBadge.setMaxCharacterCount(1);
+        favoriteBadge.setMaxCharacterCount(2);
         return view;
     }
 

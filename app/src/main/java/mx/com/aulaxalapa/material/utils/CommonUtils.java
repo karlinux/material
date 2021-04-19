@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment;
 
 import mx.com.aulaxalapa.material.fragments.BottomNavigationBarFragment;
 import mx.com.aulaxalapa.material.fragments.ButtonFragment;
+import mx.com.aulaxalapa.material.fragments.SnackBarFragment;
+import mx.com.aulaxalapa.material.fragments.TextFieldFragment;
+import mx.com.aulaxalapa.material.fragments.TextFieldFragment;
 
 public class CommonUtils {
 
@@ -23,6 +26,12 @@ public class CommonUtils {
                 break;
             case BottomNavigationBarFragment.TAG:
                 fragment = new BottomNavigationBarFragment();
+                break;
+            case SnackBarFragment.TAG:
+                    fragment = new SnackBarFragment();
+                break;
+            case TextFieldFragment.TAG:
+                    fragment = new TextFieldFragment();
                 break;
         }
         return fragment;
