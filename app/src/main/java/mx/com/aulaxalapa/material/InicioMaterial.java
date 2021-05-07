@@ -13,6 +13,10 @@ import butterknife.ButterKnife;
 import mx.com.aulaxalapa.material.adapters.ComponentAdapter;
 import mx.com.aulaxalapa.material.fragments.BottomNavigationBarFragment;
 import mx.com.aulaxalapa.material.fragments.ButtonFragment;
+import mx.com.aulaxalapa.material.fragments.CardFragment;
+import mx.com.aulaxalapa.material.fragments.CheckBoxFragment;
+import mx.com.aulaxalapa.material.fragments.FloatingActionButtonFragment;
+import mx.com.aulaxalapa.material.fragments.MenuFragment;
 import mx.com.aulaxalapa.material.fragments.SnackBarFragment;
 import mx.com.aulaxalapa.material.fragments.TextFieldFragment;
 import mx.com.aulaxalapa.material.utils.Component;
@@ -41,6 +45,11 @@ public class InicioMaterial extends AppCompatActivity implements OnClickListener
         mAdapter.add(BottomNavigationBarFragment.getInstance());
         mAdapter.add(SnackBarFragment.getInstance());
         mAdapter.add(TextFieldFragment.getInstance());
+        mAdapter.add(FloatingActionButtonFragment.getInstance());
+        mAdapter.add(CheckBoxFragment.getInstance());
+        mAdapter.add(CardFragment.getInstance());
+        mAdapter.add(MenuFragment.getInstance());
+        mAdapter.reverse();
     }
 
     private void configRecycleView(){

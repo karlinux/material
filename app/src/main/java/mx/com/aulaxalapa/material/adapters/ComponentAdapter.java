@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;
@@ -53,6 +54,11 @@ public class ComponentAdapter extends RecyclerView.Adapter<ComponentAdapter.View
             notifyItemInserted(mComponent.size() - 1);
         }
     }
+
+     public void reverse(){
+         Collections.reverse(mComponent);
+         notifyDataSetChanged();
+     }
     class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.imgPhoto)
         AppCompatImageView imgPhoto;
